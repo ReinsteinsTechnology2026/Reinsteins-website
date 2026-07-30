@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1600 800" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" stroke="#B19463" stroke-width="1.4" stroke-opacity="0.1">
+<path d="M926,573 L925,573 L925,520"/>
+<path d="M1048,487 L192,487"/>
+<path d="M290,92 L1219,92"/>
+<path d="M1339,756 L1276,756"/>
+<path d="M129,60 L389,60"/>
+<path d="M61,796 L668,796 L668,451"/>
+<path d="M478,655 L1023,655 L1023,4"/>
+<path d="M1341,284 L1128,284 L1128,85"/>
+<path d="M1552,235 L60,235 L60,71"/>
+<path d="M220,297 L136,297 L136,17"/>
+<path d="M429,53 L768,53 L768,725"/>
+<path d="M1159,644 L1594,644"/>
+<path d="M689,89 L681,89 L681,15"/>
+<path d="M504,723 L22,723"/>
+<path d="M997,181 L916,181"/>
+<path d="M1498,787 L858,787"/>
+<path d="M238,404 L435,404 L435,0"/>
+<path d="M40,215 L807,215"/>
+<path d="M1181,102 L299,102"/>
+<path d="M528,9 L606,9 L606,395"/>
+</g>
+<g fill="#B19463" fill-opacity="0.16">
+<circle cx="926" cy="573" r="3"/>
+<circle cx="925" cy="573" r="2"/>
+<circle cx="925" cy="520" r="2"/>
+<circle cx="1048" cy="487" r="2"/>
+<circle cx="192" cy="487" r="2"/>
+<circle cx="290" cy="92" r="2"/>
+<circle cx="1219" cy="92" r="2"/>
+<circle cx="1339" cy="756" r="2"/>
+<circle cx="1276" cy="756" r="3"/>
+<circle cx="129" cy="60" r="2"/>
+<circle cx="389" cy="60" r="3"/>
+<circle cx="61" cy="796" r="3"/>
+<circle cx="668" cy="796" r="2"/>
+<circle cx="668" cy="451" r="3"/>
+<circle cx="478" cy="655" r="3"/>
+<circle cx="1023" cy="655" r="2"/>
+<circle cx="1023" cy="4" r="2"/>
+<circle cx="1341" cy="284" r="3"/>
+<circle cx="1128" cy="284" r="2"/>
+<circle cx="1128" cy="85" r="2"/>
+<circle cx="1552" cy="235" r="3"/>
+<circle cx="60" cy="235" r="2"/>
+<circle cx="60" cy="71" r="2"/>
+<circle cx="220" cy="297" r="3"/>
+<circle cx="136" cy="297" r="2"/>
+<circle cx="136" cy="17" r="2"/>
+<circle cx="429" cy="53" r="2"/>
+<circle cx="768" cy="53" r="2"/>
+<circle cx="768" cy="725" r="2"/>
+<circle cx="1159" cy="644" r="3"/>
+<circle cx="1594" cy="644" r="2"/>
+<circle cx="689" cy="89" r="2"/>
+<circle cx="681" cy="89" r="2"/>
+<circle cx="681" cy="15" r="2"/>
+<circle cx="504" cy="723" r="2"/>
+<circle cx="22" cy="723" r="2"/>
+<circle cx="997" cy="181" r="3"/>
+<circle cx="916" cy="181" r="2"/>
+<circle cx="1498" cy="787" r="3"/>
+<circle cx="858" cy="787" r="2"/>
+<circle cx="238" cy="404" r="2"/>
+<circle cx="435" cy="404" r="3"/>
+<circle cx="435" cy="0" r="2"/>
+<circle cx="40" cy="215" r="3"/>
+<circle cx="807" cy="215" r="3"/>
+<circle cx="1181" cy="102" r="2"/>
+<circle cx="299" cy="102" r="2"/>
+<circle cx="528" cy="9" r="2"/>
+<circle cx="606" cy="9" r="2"/>
+<circle cx="606" cy="395" r="2"/>
+</g>
+<g transform="translate(1400,120)" opacity="0.05">
+  <polygon points="0,-160 140,-80 140,80 0,160 -140,80 -140,-80" fill="none" stroke="#B19463" stroke-width="3"/>
+</g>
+<g transform="translate(120,650)" opacity="0.05">
+  <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60" fill="none" stroke="#B19463" stroke-width="3"/>
+</g>
+</svg>

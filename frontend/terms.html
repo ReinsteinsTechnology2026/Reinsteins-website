@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions — Reinsteins Technologies &amp; Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16202e;
+    --ink-soft:#3d4a5c;
+    --steel:#1f3a5f;
+    --steel-deep:#152a45;
+    --brass:#9a7331;
+    --brass-bright:#b8862f;
+    --paper:#ffffff;
+    --paper-2:#f6f4ef;
+    --line:#e3ded4;
+    --line-strong:#cabfa8;
+    --shadow:0 1px 2px rgba(21,42,69,.06),0 8px 30px rgba(21,42,69,.06);
+    --maxw:1180px;
+    --display:"Space Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
+    --body:"Source Serif 4",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper-2);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+ 
+  /* ---------- Masthead ---------- */
+  .masthead{
+    background:var(--steel-deep);
+    color:#f4f1ea;
+    border-bottom:3px solid var(--brass);
+  }
+  .masthead-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:44px 40px 40px;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--brass-bright);
+    margin:0 0 18px;
+  }
+  .brand{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(28px,4.4vw,46px);
+    line-height:1.06;
+    letter-spacing:-.015em;
+    margin:0 0 6px;
+    color:#fff;
+  }
+  .brand small{
+    display:block;
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(15px,2vw,19px);
+    letter-spacing:.02em;
+    color:#c8d2df;
+    margin-top:10px;
+  }
+  .doc-title{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:15px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:#efe7d6;
+    margin:26px 0 22px;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.14);
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:baseline;
+    gap:8px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:2px;
+    padding:8px 14px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.04em;
+    color:#e8e2d5;
+  }
+  .badge b{color:var(--brass-bright);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;}
+ 
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 40px 90px;
+    display:grid;
+    grid-template-columns:266px minmax(0,1fr);
+    gap:56px;
+    align-items:start;
+  }
+ 
+  /* ---------- Table of contents ---------- */
+  .toc{
+    position:sticky;
+    top:0;
+    align-self:start;
+    padding:38px 0 20px;
+    max-height:100vh;
+    overflow-y:auto;
+  }
+  .toc h2{
+    font-family:var(--display);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 16px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--line-strong);
+  }
+  .toc ol{list-style:none;margin:0;padding:0;counter-reset:toc;}
+  .toc li{margin:0;}
+  .toc a{
+    display:flex;
+    gap:11px;
+    align-items:baseline;
+    padding:5px 10px 5px 0;
+    font-family:var(--display);
+    font-size:13.5px;
+    line-height:1.35;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-left:2px solid transparent;
+    padding-left:12px;
+    transition:color .15s,border-color .15s;
+  }
+  .toc a .n{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--brass);
+    min-width:20px;
+    font-weight:600;
+  }
+  .toc a:hover{
+    color:var(--brass);
+    border-left:none;
+}
+  .toc a.active{
+    color:var(--brass);
+    font-weight:600;
+    border-left:none;
+    background:none;
+    box-shadow:none;
+}
+ 
+  /* ---------- Content ---------- */
+  .content{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:3px;
+    box-shadow:var(--shadow);
+    padding:56px clamp(28px,5vw,64px) 64px;
+  }
+  .preamble{
+    font-size:18px;
+    line-height:1.78;
+    color:var(--ink-soft);
+  }
+  .preamble strong{color:var(--ink);}
+  .preamble .lede{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:16px;
+    line-height:1.6;
+    color:var(--steel);
+    border-left:3px solid var(--brass);
+    padding:4px 0 4px 20px;
+    margin:0 0 30px;
+  }
+ 
+  section{
+    padding-top:44px;
+    margin-top:44px;
+    border-top:1px solid var(--line);
+    scroll-margin-top:24px;
+  }
+  section:first-of-type{border-top:none;}
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin:0 0 20px;
+  }
+  .sec-num{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:15px;
+    color:var(--paper);
+    background:var(--steel);
+    padding:4px 10px;
+    border-radius:2px;
+    line-height:1;
+    flex-shrink:0;
+    letter-spacing:.02em;
+  }
+  h1.sec-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(20px,2.6vw,26px);
+    letter-spacing:-.01em;
+    color:var(--steel-deep);
+    margin:0;
+    line-height:1.2;
+  }
+  section p{margin:0 0 15px;}
+  section p:last-child{margin-bottom:0;}
+  .content strong{color:var(--ink);font-weight:600;}
+ 
+  ul.clean, ol.legal{margin:2px 0 18px;padding-left:0;}
+  ul.clean{list-style:none;}
+  ul.clean li{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:11px;
+  }
+  ul.clean li::before{
+    content:"";
+    position:absolute;
+    left:4px;top:12px;
+    width:7px;height:7px;
+    background:var(--brass);
+    border-radius:1px;
+    transform:rotate(45deg);
+  }
+  ol.legal{counter-reset:leg;list-style:none;}
+  ol.legal li{
+    position:relative;
+    padding-left:38px;
+    margin-bottom:13px;
+    counter-increment:leg;
+  }
+  ol.legal li::before{
+    content:counter(leg,decimal) ".";
+    position:absolute;
+    left:0;top:0;
+    font-family:var(--mono);
+    font-size:13px;
+    font-weight:600;
+    color:var(--brass);
+  }
+ 
+  dl.defs{margin:0;}
+  dl.defs > div{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:20px;
+  }
+  dl.defs > div:last-child{border-bottom:none;}
+  dl.defs dt{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    color:var(--steel-deep);
+  }
+  dl.defs dd{margin:0;color:var(--ink-soft);font-size:16px;}
+ 
+  .note{
+    background:var(--paper-2);
+    border:1px solid var(--line-strong);
+    border-left:3px solid var(--brass);
+    border-radius:2px;
+    padding:16px 20px;
+    margin:20px 0;
+    font-size:15.5px;
+    color:var(--ink-soft);
+  }
+  .note b{color:var(--steel-deep);font-family:var(--display);font-size:13px;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:6px;}
+ 
+  .fill{
+    font-family:var(--mono);
+    font-size:.9em;
+    background:#fbf3df;
+    border:1px dashed var(--line-strong);
+    border-radius:2px;
+    padding:1px 6px;
+    color:var(--brass);
+    white-space:nowrap;
+  }
+ 
+  h3.sub{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    color:var(--steel);
+    margin:24px 0 10px;
+    letter-spacing:.01em;
+  }
+ 
+  /* ---------- Table ---------- */
+  .tbl-wrap{overflow-x:auto;margin:18px 0;}
+  table{border-collapse:collapse;width:100%;font-size:15px;}
+  table th{
+    background:var(--steel-deep);
+    color:#f4f1ea;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:.03em;
+    text-align:left;
+    padding:12px 16px;
+  }
+  table td{
+    padding:12px 16px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+    vertical-align:top;
+  }
+  table tr:nth-child(even) td{background:var(--paper-2);}
+ 
+  /* ---------- Footer ---------- */
+  .doc-foot{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 40px 60px;
+    text-align:center;
+  }
+  .doc-foot .rule{height:1px;background:var(--line-strong);margin:0 0 26px;}
+  .doc-foot p{
+    font-family:var(--display);
+    font-size:13px;
+    color:var(--ink-soft);
+    letter-spacing:.02em;
+    margin:6px 0;
+  }
+  .doc-foot .mark{color:var(--brass);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:11px;}
+ 
+  /* ---------- Responsive ---------- */
+  @media (max-width:920px){
+    .layout{grid-template-columns:1fr;gap:0;padding:0 20px 60px;}
+    .toc{
+      position:static;max-height:none;overflow:visible;
+      padding:28px 0 8px;margin-bottom:8px;
+      border-bottom:1px solid var(--line-strong);
+    }
+    .toc ol{columns:2;column-gap:24px;}
+    .toc a{border-left:none;padding-left:0;}
+    .toc a:hover,.toc a.active{border-left:none;}
+    .content{padding:36px 22px 44px;}
+    .masthead-inner{padding:34px 22px 30px;}
+    .doc-foot{padding:0 20px 50px;}
+    dl.defs > div{grid-template-columns:1fr;gap:4px;}
+  }
+  @media (max-width:520px){
+    body{font-size:16px;}
+    .toc ol{columns:1;}
+  }
+ 
+  /* ---------- Print ---------- */
+  @media print{
+    body{background:#fff;font-size:11pt;}
+    .toc{display:none;}
+    .layout{display:block;padding:0;max-width:none;}
+    .content{border:none;box-shadow:none;padding:0;}
+    .masthead{background:#fff;color:#000;border-bottom:2px solid #000;}
+    .masthead .brand,.masthead .doc-title,.masthead .eyebrow,.badge{color:#000;}
+    .badge{border-color:#999;}
+    section{break-inside:avoid;}
+    .sec-num{background:#000;color:#fff;}
+  }
+</style>
+</head>
+<body>
+ 
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Legal · Client Services</p>
+    <h1 class="brand">Reinsteins Technologies &amp; Solutions
+      <small>A sole proprietorship concern owned and operated by REBEKKAL V</small>
+    </h1>
+    <p class="doc-title">Terms &amp; Conditions</p>
+    <div class="meta-row">
+      <span class="badge"><b>Effective</b> July 20, 2026</span>
+      <span class="badge"><b>Last Updated</b> July 20, 2026</span>
+      <span class="badge"><b>Version</b> 1.0</span>
+    </div>
+  </div>
+</header>
+ 
+<div class="layout">
+ 
+  <!-- TABLE OF CONTENTS -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1"><span class="n">1</span>Definitions</a></li>
+      <li><a href="#s2"><span class="n">2</span>Acceptance of Terms</a></li>
+      <li><a href="#s3"><span class="n">3</span>Company Information</a></li>
+      <li><a href="#s4"><span class="n">4</span>Scope of Services</a></li>
+      <li><a href="#s5"><span class="n">5</span>Client Eligibility</a></li>
+      <li><a href="#s6"><span class="n">6</span>Website Usage</a></li>
+      <li><a href="#s7"><span class="n">7</span>Quotations, Proposals &amp; Project Acceptance</a></li>
+      <li><a href="#s8"><span class="n">8</span>Payments &amp; Billing</a></li>
+      <li><a href="#s9"><span class="n">9</span>Project Execution &amp; Delivery</a></li>
+      <li><a href="#s10"><span class="n">10</span>Change Requests</a></li>
+      <li><a href="#s11"><span class="n">11</span>Client Responsibilities</a></li>
+      <li><a href="#s12"><span class="n">12</span>Intellectual Property</a></li>
+      <li><a href="#s13"><span class="n">13</span>Open Source &amp; Third-Party Software</a></li>
+      <li><a href="#s14"><span class="n">14</span>Confidentiality</a></li>
+      <li><a href="#s15"><span class="n">15</span>Data Protection &amp; Privacy</a></li>
+      <li><a href="#s16"><span class="n">16</span>Cybersecurity</a></li>
+      <li><a href="#s17"><span class="n">17</span>Data Backup &amp; Disaster Recovery</a></li>
+      <li><a href="#s18"><span class="n">18</span>Warranty &amp; Maintenance</a></li>
+      <li><a href="#s19"><span class="n">19</span>Service Level Agreement</a></li>
+      <li><a href="#s20"><span class="n">20</span>Cancellation &amp; Refund</a></li>
+      <li><a href="#s21"><span class="n">21</span>Limitation of Liability</a></li>
+      <li><a href="#s22"><span class="n">22</span>Force Majeure</a></li>
+      <li><a href="#s23"><span class="n">23</span>Governing Law &amp; Jurisdiction</a></li>
+      <li><a href="#s24"><span class="n">24</span>Non-Solicitation</a></li>
+      <li><a href="#s25"><span class="n">25</span>Portfolio Rights</a></li>
+      <li><a href="#s26"><span class="n">26</span>Assignment</a></li>
+      <li><a href="#s27"><span class="n">27</span>Entire Agreement</a></li>
+      <li><a href="#s28"><span class="n">28</span>Severability</a></li>
+      <li><a href="#s29"><span class="n">29</span>Waiver</a></li>
+      <li><a href="#s30"><span class="n">30</span>Contact Information</a></li>
+    </ol>
+  </nav>
+ 
+  <!-- MAIN CONTENT -->
+  <main class="content">
+ 
+    <!-- PREAMBLE -->
+    <div class="preamble">
+      <p class="lede">These Terms &amp; Conditions form a binding legal agreement between you and Reinsteins Technologies &amp; Solutions. Please read them carefully before using our website or engaging our services.</p>
+      <p>These Terms &amp; Conditions (the <strong>"Terms"</strong>) govern your access to and use of the website, products, software, applications, platforms, and professional services offered by <strong>Reinsteins Technologies &amp; Solutions</strong> (<strong>"Reinsteins"</strong>, the <strong>"Company"</strong>, <strong>"we"</strong>, <strong>"our"</strong>, or <strong>"us"</strong>).</p>
+      <p>By accessing our website, requesting our services, submitting enquiries, accepting a quotation or proposal, entering into a Service Agreement or Statement of Work (SOW), or otherwise engaging with Reinsteins Technologies &amp; Solutions, you acknowledge that you have read, understood, and agree to be legally bound by these Terms.</p>
+      <p>If you do not agree with these Terms, you must refrain from using our website or engaging our services.</p>
+    </div>
+ 
+    <!-- 1. DEFINITIONS -->
+    <section id="s1">
+      <div class="sec-head"><span class="sec-num">01</span><h1 class="sec-title">Definitions</h1></div>
+      <p>In these Terms, unless the context requires otherwise, the following words have the meanings set out below:</p>
+      <dl class="defs">
+        <div><dt>Agreement</dt><dd>These Terms together with any Quotation, Proposal, Service Agreement, Statement of Work, invoice, or written schedule accepted by both parties.</dd></div>
+        <div><dt>Client / You</dt><dd>Any individual, business, firm, or entity that engages the Company for Services or otherwise uses the Website.</dd></div>
+        <div><dt>Company / We</dt><dd>Reinsteins Technologies &amp; Solutions, a sole proprietorship concern, together with its proprietor, employees, contractors, and authorised representatives.</dd></div>
+        <div><dt>Services</dt><dd>The information-technology and related professional services described in Section 4 and detailed in the applicable Quotation, Proposal, or SOW.</dd></div>
+        <div><dt>Deliverables</dt><dd>The software, code, designs, documentation, reports, or other work products the Company creates and delivers to the Client under a project.</dd></div>
+        <div><dt>Quotation / Proposal</dt><dd>A written estimate or offer issued by the Company describing the proposed scope, fees, and timelines for a project.</dd></div>
+        <div><dt>Statement of Work (SOW)</dt><dd>A written document defining the specific scope, deliverables, milestones, and commercial terms for an individual engagement.</dd></div>
+        <div><dt>Fees</dt><dd>The charges payable by the Client for the Services, as set out in the applicable Quotation, Proposal, SOW, or invoice.</dd></div>
+        <div><dt>Confidential Information</dt><dd>Any non-public information disclosed by one party to the other, whether oral, written, or electronic, that is marked confidential or would reasonably be understood to be confidential.</dd></div>
+        <div><dt>Intellectual Property</dt><dd>All copyrights, trademarks, designs, patents, trade secrets, source code, and other proprietary rights, whether registered or unregistered.</dd></div>
+        <div><dt>Website</dt><dd>The website operated by the Company at www.reinsteins.com and any associated subdomains or applications.</dd></div>
+      </dl>
+      <p>Words in the singular include the plural and vice versa. Headings are for convenience only and do not affect interpretation.</p>
+    </section>
+ 
+    <!-- 2. ACCEPTANCE -->
+    <section id="s2">
+      <div class="sec-head"><span class="sec-num">02</span><h1 class="sec-title">Acceptance of Terms</h1></div>
+      <p>You accept these Terms and enter into a binding Agreement with the Company when you do any of the following:</p>
+      <ul class="clean">
+        <li>Access, browse, or use the Website;</li>
+        <li>Submit an enquiry, request, or brief for Services;</li>
+        <li>Accept a Quotation, Proposal, or Statement of Work in writing, by email, or by electronic means;</li>
+        <li>Make any payment towards a project; or</li>
+        <li>Otherwise instruct the Company to commence work.</li>
+      </ul>
+      <p>These Terms apply to every engagement between you and the Company. Where a signed Service Agreement or SOW exists and its terms conflict with these Terms, the signed document prevails for that engagement. In all other respects, these Terms remain in full force.</p>
+      <p>The Company may update these Terms from time to time. The version in effect at the date your project is accepted governs that project. Continued use of the Website or Services after an update constitutes acceptance of the revised Terms.</p>
+    </section>
+ 
+    <!-- 3. COMPANY INFORMATION -->
+    <section id="s3">
+      <div class="sec-head"><span class="sec-num">03</span><h1 class="sec-title">Company Information</h1></div>
+      <p>Reinsteins Technologies &amp; Solutions is a sole proprietorship concern owned and operated by its proprietor. The Company provides information-technology products and professional services to clients in India and internationally.</p>
+      <div class="tbl-wrap">
+        <table>
+          <tbody>
+            <tr><th style="width:34%">Registered Name</th><td>Reinsteins</td></tr>
+            <tr><th>Trading / Operating As</th><td>Reinsteins Technologies &amp; Solutions</td></tr>
+            <tr><th>Business Structure</th><td>Sole Proprietorship</td></tr>
+            <tr><th>Proprietor</th><td>REBEKKAL V</td></tr>
+            <tr><th>Registered / Principal Address</th><td>No. 6/24, Krishna Kutir, 4 Ramanathan Street, Mahalingapuram, Chennai 600034, Tamil Nadu, India</td></tr>
+            <tr><th>Email</th><td>contact@reinsteins.com</td></tr>
+            <tr><th>Phone</th><td>+91 99403 90309</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <b>Note on business structure</b>
+        As a sole proprietorship, the Company and its proprietor are treated as a single legal person under Indian law. The proprietorship is registered under the name "Reinsteins" and trades and operates under the name "Reinsteins Technologies &amp; Solutions." All contractual obligations, liabilities, and rights under these Terms are those of the proprietor, REBEKKAL V, trading under that name.
+      </div>
+    </section>
+ 
+    <!-- 4. SCOPE OF SERVICES -->
+    <section id="s4">
+      <div class="sec-head"><span class="sec-num">04</span><h1 class="sec-title">Scope of Services</h1></div>
+      <p>The Company offers a range of information-technology and digital services, which may include but are not limited to:</p>
+      <ul class="clean">
+        <li>Website design, development, and maintenance;</li>
+        <li>Web and mobile application development;</li>
+        <li>Custom software development and integration;</li>
+        <li>UI/UX design and prototyping;</li>
+        <li>E-commerce solutions and platform development;</li>
+        <li>API development and third-party integrations;</li>
+        <li>Cloud deployment, hosting setup, and DevOps support;</li>
+        <li>Technical consulting and IT solution architecture;</li>
+        <li>Ongoing support, maintenance, and enhancement services.</li>
+      </ul>
+      <p>The precise scope of any engagement is defined solely in the applicable Quotation, Proposal, or SOW. Any service, feature, or deliverable not expressly stated in that document is outside the agreed scope and is not included in the Fees.</p>
+      <p>The Company reserves the right to decline any project or request at its discretion, and to modify, discontinue, or update its service offerings at any time.</p>
+    </section>
+ 
+    <!-- 5. CLIENT ELIGIBILITY -->
+    <section id="s5">
+      <div class="sec-head"><span class="sec-num">05</span><h1 class="sec-title">Client Eligibility</h1></div>
+      <p>To engage the Company's Services or use the Website, you represent and warrant that:</p>
+      <ol class="legal">
+        <li>You are at least 18 years of age and legally capable of entering into a binding contract under the Indian Contract Act, 1872;</li>
+        <li>If you are acting on behalf of a business or entity, you have the authority to bind that business or entity to these Terms;</li>
+        <li>The information you provide to the Company is true, accurate, and complete;</li>
+        <li>You will use the Services only for lawful purposes and not for any activity that is fraudulent, infringing, or prohibited by law.</li>
+      </ol>
+      <p>The Company may verify eligibility and may refuse or terminate service if any representation is found to be false or misleading.</p>
+    </section>
+ 
+    <!-- 6. WEBSITE USAGE -->
+    <section id="s6">
+      <div class="sec-head"><span class="sec-num">06</span><h1 class="sec-title">Website Usage</h1></div>
+      <p>Your use of the Website is subject to the following conditions. You agree that you will not:</p>
+      <ul class="clean">
+        <li>Copy, reproduce, or republish any content from the Website without prior written permission;</li>
+        <li>Attempt to gain unauthorised access to the Website, its servers, or connected systems;</li>
+        <li>Introduce viruses, malware, or any harmful or disruptive code;</li>
+        <li>Use automated tools to scrape, harvest, or extract data from the Website;</li>
+        <li>Use the Website in any manner that could damage, disable, or impair its operation;</li>
+        <li>Post or transmit unlawful, defamatory, or infringing material through any contact forms or channels.</li>
+      </ul>
+      <p>All content on the Website, including text, graphics, logos, and design, is owned by or licensed to the Company and is protected by applicable intellectual-property laws. The Company may suspend or restrict access to the Website at any time without notice.</p>
+    </section>
+ 
+    <!-- 7. QUOTATIONS -->
+    <section id="s7">
+      <div class="sec-head"><span class="sec-num">07</span><h1 class="sec-title">Quotations, Proposals &amp; Project Acceptance</h1></div>
+      <p>All Quotations and Proposals issued by the Company are estimates based on the information available at the time of issue. Unless stated otherwise, a Quotation or Proposal is valid for <strong>fifteen (15) days</strong> from its date of issue, after which it may be revised or withdrawn.</p>
+      <p>A project is deemed accepted, and a binding Agreement is formed, when the Client:</p>
+      <ol class="legal">
+        <li>Confirms acceptance of the Quotation, Proposal, or SOW in writing or by email; or</li>
+        <li>Pays the advance or first instalment specified in the Quotation, Proposal, or SOW.</li>
+      </ol>
+      <p>Where the scope, requirements, or assumptions on which a Quotation was based change, the Company may revise its Fees and timelines accordingly. Verbal estimates are indicative only and are not binding until confirmed in writing.</p>
+    </section>
+ 
+    <!-- 8. PAYMENTS -->
+    <section id="s8">
+      <div class="sec-head"><span class="sec-num">08</span><h1 class="sec-title">Payments &amp; Billing</h1></div>
+      <p>Unless a different structure is agreed in the Quotation, Proposal, or SOW, the following payment terms apply:</p>
+      <ul class="clean">
+        <li><strong>Advance payment.</strong> Projects generally commence only after receipt of an advance, typically <span class="fill">[30–50%]</span> of the total project Fee.</li>
+        <li><strong>Milestone payments.</strong> The remaining Fee is payable in instalments linked to agreed project milestones.</li>
+        <li><strong>Final payment.</strong> The final instalment is due before final delivery, deployment, or handover of the completed Deliverables.</li>
+      </ul>
+      <h3 class="sub">Taxes</h3>
+      <p>All Fees are exclusive of applicable taxes. Goods and Services Tax (GST) and any other statutory levies will be charged in addition, where applicable, at the prevailing rates.</p>
+      <h3 class="sub">Invoicing &amp; Late Payment</h3>
+      <p>Invoices are payable within <span class="fill">[7–15]</span> days of the invoice date unless otherwise stated. If payment is not received by the due date, the Company may:</p>
+      <ol class="legal">
+        <li>Charge interest on overdue amounts at <span class="fill">[1.5%]</span> per month or the maximum permitted by law, whichever is lower;</li>
+        <li>Suspend work, delivery, or access to Deliverables until outstanding amounts are cleared;</li>
+        <li>Withhold transfer of intellectual-property rights until full payment is received.</li>
+      </ol>
+      <p>All payments are to be made in <span class="fill">[Indian Rupees (INR)]</span> unless agreed otherwise. Bank charges, transfer fees, and currency-conversion costs are borne by the Client.</p>
+    </section>
+ 
+    <!-- 9. PROJECT EXECUTION -->
+    <section id="s9">
+      <div class="sec-head"><span class="sec-num">09</span><h1 class="sec-title">Project Execution &amp; Delivery</h1></div>
+      <p>The Company will use reasonable skill and care to perform the Services and deliver the agreed Deliverables in accordance with the applicable SOW.</p>
+      <p>Timelines and delivery dates provided by the Company are good-faith estimates. They depend on the timely cooperation of the Client, including the provision of content, approvals, access, and feedback. Delivery dates may be extended where delays are caused by:</p>
+      <ul class="clean">
+        <li>Late or incomplete provision of materials, content, or information by the Client;</li>
+        <li>Delayed approvals, sign-offs, or responses from the Client;</li>
+        <li>Change requests or additions to the agreed scope;</li>
+        <li>Third-party dependencies, service outages, or circumstances beyond the Company's control.</li>
+      </ul>
+      <p>Deliverables will be provided in the format and by the method agreed in the SOW. Unless otherwise stated, delivery is deemed complete when the Deliverables are made available to the Client for review or deployment.</p>
+    </section>
+ 
+    <!-- 10. CHANGE REQUESTS -->
+    <section id="s10">
+      <div class="sec-head"><span class="sec-num">10</span><h1 class="sec-title">Change Requests</h1></div>
+      <p>Any request by the Client to add, remove, or modify features, scope, or requirements after a project has been accepted is a <strong>Change Request</strong>.</p>
+      <p>Change Requests are handled as follows:</p>
+      <ol class="legal">
+        <li>The Client submits the Change Request in writing;</li>
+        <li>The Company assesses its impact on scope, timeline, and cost;</li>
+        <li>The Company provides a written estimate of any additional Fees and revised timelines;</li>
+        <li>Work on the Change Request begins only after the Client approves the estimate in writing.</li>
+      </ol>
+      <p>Work already completed in accordance with the original scope remains chargeable. Repeated or substantial changes may materially affect delivery dates and total project cost.</p>
+    </section>
+ 
+    <!-- 11. CLIENT RESPONSIBILITIES -->
+    <section id="s11">
+      <div class="sec-head"><span class="sec-num">11</span><h1 class="sec-title">Client Responsibilities</h1></div>
+      <p>To enable the Company to perform the Services effectively, the Client agrees to:</p>
+      <ul class="clean">
+        <li>Provide accurate, complete, and timely information, content, and materials;</li>
+        <li>Grant necessary access to systems, accounts, hosting, and third-party services required for the project;</li>
+        <li>Review Deliverables and provide feedback or approvals within agreed timeframes;</li>
+        <li>Ensure that any content, data, or materials supplied to the Company do not infringe the rights of any third party;</li>
+        <li>Obtain and maintain any licences, permissions, or consents required for the Client's use of the Deliverables;</li>
+        <li>Nominate a point of contact authorised to make decisions and approvals on the Client's behalf.</li>
+      </ul>
+      <p>The Company is not responsible for delays, defects, or losses arising from the Client's failure to meet these responsibilities.</p>
+    </section>
+ 
+    <!-- 12. INTELLECTUAL PROPERTY -->
+    <section id="s12">
+      <div class="sec-head"><span class="sec-num">12</span><h1 class="sec-title">Intellectual Property</h1></div>
+      <p>Subject to full and final payment of all Fees due, the Company assigns to the Client the intellectual-property rights in the final, custom Deliverables created specifically for the Client under the applicable SOW.</p>
+      <p>The following are expressly excluded from any such assignment and remain the property of the Company or their respective owners:</p>
+      <ul class="clean">
+        <li>Pre-existing tools, frameworks, libraries, code, and methodologies owned by the Company prior to or independent of the project;</li>
+        <li>Generic components, templates, and know-how that the Company may reuse across projects;</li>
+        <li>Third-party and open-source software, which remains subject to its own licence terms (see Section 13).</li>
+      </ul>
+      <p>Until all Fees are paid in full, the Company retains all intellectual-property rights in the Deliverables, and the Client has no licence to use them. The Company grants the Client, upon full payment, a perpetual right to use any Company-owned pre-existing components solely as incorporated within the delivered project.</p>
+    </section>
+ 
+    <!-- 13. OPEN SOURCE -->
+    <section id="s13">
+      <div class="sec-head"><span class="sec-num">13</span><h1 class="sec-title">Open Source &amp; Third-Party Software</h1></div>
+      <p>The Deliverables may incorporate open-source software, third-party libraries, plugins, frameworks, or services. Such components are licensed to the Client under their respective licence terms, not assigned by the Company.</p>
+      <p>The Client acknowledges that:</p>
+      <ol class="legal">
+        <li>Use of open-source and third-party components is subject to the applicable licences, and the Client is responsible for complying with them;</li>
+        <li>The Company does not own and cannot transfer ownership of third-party or open-source components;</li>
+        <li>Third-party services (such as hosting, payment gateways, APIs, and SaaS tools) are governed by the terms of their respective providers, and any fees for such services are the Client's responsibility;</li>
+        <li>The Company is not liable for changes, deprecations, outages, or discontinuation of third-party or open-source components outside its control.</li>
+      </ol>
+    </section>
+ 
+    <!-- 14. CONFIDENTIALITY -->
+    <section id="s14">
+      <div class="sec-head"><span class="sec-num">14</span><h1 class="sec-title">Confidentiality</h1></div>
+      <p>Each party may receive Confidential Information from the other during an engagement. Both parties agree to:</p>
+      <ul class="clean">
+        <li>Keep the other party's Confidential Information secret and secure;</li>
+        <li>Use it only for the purpose of performing or receiving the Services;</li>
+        <li>Not disclose it to any third party without prior written consent, except to employees or contractors who need to know it and are bound by equivalent confidentiality obligations.</li>
+      </ul>
+      <p>These obligations do not apply to information that: (a) is or becomes publicly available through no breach of these Terms; (b) was lawfully known before disclosure; (c) is independently developed without reference to the Confidential Information; or (d) is required to be disclosed by law or a competent authority.</p>
+      <p>The confidentiality obligations in this Section survive termination of the Agreement for a period of <span class="fill">[3]</span> years, and indefinitely for trade secrets.</p>
+    </section>
+ 
+    <!-- 15. DATA PROTECTION -->
+    <section id="s15">
+      <div class="sec-head"><span class="sec-num">15</span><h1 class="sec-title">Data Protection &amp; Privacy</h1></div>
+      <p>The Company processes personal data in accordance with applicable Indian data-protection law, including the Digital Personal Data Protection Act, 2023, and any rules made under it.</p>
+      <p>Where the Company processes personal data on behalf of the Client in the course of providing Services, the Company will:</p>
+      <ol class="legal">
+        <li>Process such data only as reasonably necessary to perform the Services;</li>
+        <li>Apply reasonable technical and organisational measures to protect the data;</li>
+        <li>Not use the Client's personal data for its own unrelated purposes;</li>
+        <li>Assist the Client, where reasonably practicable, in responding to data-subject requests and regulatory obligations.</li>
+      </ol>
+      <p>The Client is responsible for ensuring that it has a lawful basis and any necessary consents to share personal data with the Company. The Company's collection and use of personal data through the Website is further described in its Privacy Policy, available at <span class="fill">[privacy policy URL]</span>.</p>
+    </section>
+ 
+    <!-- 16. CYBERSECURITY -->
+    <section id="s16">
+      <div class="sec-head"><span class="sec-num">16</span><h1 class="sec-title">Cybersecurity</h1></div>
+      <p>The Company follows reasonable industry practices to protect its systems and the Deliverables against unauthorised access, loss, and misuse. These may include access controls, secure development practices, encryption where appropriate, and regular updates.</p>
+      <p>However, the Client acknowledges that no system is completely secure. The Company does not warrant that the Deliverables or any system will be free from vulnerabilities, breaches, or attacks. The Client is responsible for:</p>
+      <ul class="clean">
+        <li>Maintaining the security of its own accounts, credentials, and infrastructure after handover;</li>
+        <li>Applying security updates and patches to deployed systems where the Company is not engaged for ongoing maintenance;</li>
+        <li>Implementing appropriate access controls for its users and administrators.</li>
+      </ul>
+      <p>Where the Client requires specific security standards, penetration testing, or compliance certifications, these must be agreed in writing in the SOW and may attract additional Fees.</p>
+    </section>
+ 
+    <!-- 17. BACKUP & DR -->
+    <section id="s17">
+      <div class="sec-head"><span class="sec-num">17</span><h1 class="sec-title">Data Backup &amp; Disaster Recovery</h1></div>
+      <p>Unless expressly included in the SOW, data backup and disaster-recovery services are not part of the standard Services.</p>
+      <p>The Client is responsible for maintaining its own backups of data, content, and configurations, particularly after project handover. Where the Company is engaged to provide backup or disaster-recovery services, the applicable frequency, retention, and recovery objectives will be defined in the SOW.</p>
+      <p>The Company is not liable for any loss of data, content, or configuration except to the extent directly caused by its own negligence in performing an expressly agreed backup service, and subject to the limitations in Section 21.</p>
+    </section>
+ 
+    <!-- 18. WARRANTY & MAINTENANCE -->
+    <section id="s18">
+      <div class="sec-head"><span class="sec-num">18</span><h1 class="sec-title">Warranty &amp; Maintenance</h1></div>
+      <p>The Company warrants that the Deliverables will materially conform to the specifications set out in the SOW for a <strong>warranty period of <span class="fill">[60]</span> days</strong> from the date of delivery or deployment (the "Warranty Period").</p>
+      <p>During the Warranty Period, the Company will correct, at no additional charge, any reproducible defect that causes the Deliverables to deviate materially from the agreed specifications. The warranty does not cover:</p>
+      <ul class="clean">
+        <li>Issues arising from modifications made by the Client or third parties;</li>
+        <li>Faults caused by misuse, incorrect configuration, or unsupported environments;</li>
+        <li>Changes required due to updates in third-party services, browsers, or operating systems;</li>
+        <li>New features, enhancements, or changes outside the original scope.</li>
+      </ul>
+      <p>After the Warranty Period, ongoing support, updates, and maintenance are available under a separate maintenance agreement or on a time-and-materials basis, at the Company's prevailing rates.</p>
+    </section>
+ 
+    <!-- 19. SLA -->
+    <section id="s19">
+      <div class="sec-head"><span class="sec-num">19</span><h1 class="sec-title">Service Level Agreement (SLA)</h1></div>
+      <p>Where the Company provides ongoing support or managed services, a Service Level Agreement may apply. Unless a specific SLA is agreed in writing, the following indicative response targets apply during standard business hours (<span class="fill">[Mon–Fri, 10:00–18:00 IST]</span>):</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Priority</th><th>Description</th><th>Target Response</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Critical</strong></td><td>System down or unusable; major business impact</td><td>Within <span class="fill">[4]</span> business hours</td></tr>
+            <tr><td><strong>High</strong></td><td>Major feature impaired; workaround limited</td><td>Within <span class="fill">[1]</span> business day</td></tr>
+            <tr><td><strong>Medium</strong></td><td>Minor feature issue; workaround available</td><td>Within <span class="fill">[2–3]</span> business days</td></tr>
+            <tr><td><strong>Low</strong></td><td>Cosmetic issues, queries, and requests</td><td>Within <span class="fill">[5]</span> business days</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Response targets refer to the time to acknowledge and begin working on an issue, not to guaranteed resolution times. Resolution times depend on the nature and complexity of the issue. SLA commitments apply only where an active, paid support or maintenance plan is in place.</p>
+    </section>
+ 
+    <!-- 20. CANCELLATION & REFUND -->
+    <section id="s20">
+      <div class="sec-head"><span class="sec-num">20</span><h1 class="sec-title">Cancellation &amp; Refund</h1></div>
+      <p>Either party may terminate an engagement by written notice in the circumstances set out below.</p>
+      <h3 class="sub">Cancellation by the Client</h3>
+      <p>If the Client cancels a project after work has commenced, the Client remains liable to pay for all work completed and all costs and third-party commitments incurred by the Company up to the date of cancellation.</p>
+      <h3 class="sub">Refunds</h3>
+      <ol class="legal">
+        <li>Advance payments cover work already scheduled and commenced and are generally <strong>non-refundable</strong>;</li>
+        <li>Where the Company has not commenced any work, it may refund the advance after deducting any administrative or third-party costs already incurred;</li>
+        <li>No refund is payable for work already completed, delivered, or approved;</li>
+        <li>Refunds, where applicable, are processed to the original payment method within <span class="fill">[14]</span> business days.</li>
+      </ol>
+      <h3 class="sub">Termination for Cause</h3>
+      <p>Either party may terminate immediately if the other commits a material breach that is not remedied within <span class="fill">[15]</span> days of written notice. On termination, the Client must pay all amounts due for work performed up to the termination date.</p>
+    </section>
+ 
+    <!-- 21. LIMITATION OF LIABILITY -->
+    <section id="s21">
+      <div class="sec-head"><span class="sec-num">21</span><h1 class="sec-title">Limitation of Liability</h1></div>
+      <p>To the maximum extent permitted by law:</p>
+      <ol class="legal">
+        <li>The Company's total aggregate liability arising out of or in connection with any engagement shall not exceed the total Fees actually paid by the Client to the Company for the specific project giving rise to the claim;</li>
+        <li>The Company shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, revenue, business, goodwill, data, or anticipated savings, even if advised of the possibility of such damages;</li>
+        <li>The Company is not liable for losses arising from third-party services, hosting, open-source components, or factors outside its reasonable control;</li>
+        <li>The Company is not liable for any loss arising from the Client's failure to meet its responsibilities under Section 11 or to maintain its own backups and security.</li>
+      </ol>
+      <p>Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law, including liability for fraud or wilful misconduct. The Services are provided on an "as is" and "as available" basis, and, except as expressly stated, all other warranties, whether express or implied, are excluded to the extent permitted by law.</p>
+    </section>
+ 
+    <!-- 22. FORCE MAJEURE -->
+    <section id="s22">
+      <div class="sec-head"><span class="sec-num">22</span><h1 class="sec-title">Force Majeure</h1></div>
+      <p>The Company is not liable for any delay or failure to perform its obligations where such delay or failure results from events beyond its reasonable control, including but not limited to: acts of God, natural disasters, floods, fire, epidemics or pandemics, war, terrorism, civil unrest, government action, changes in law, strikes, power or internet outages, failures of telecommunications or third-party service providers, cyber-attacks, or hardware failures.</p>
+      <p>If a force-majeure event continues for more than <span class="fill">[30]</span> days, either party may terminate the affected engagement by written notice, in which case the Client remains liable for work performed up to the date of the event.</p>
+    </section>
+ 
+    <!-- 23. GOVERNING LAW -->
+    <section id="s23">
+      <div class="sec-head"><span class="sec-num">23</span><h1 class="sec-title">Governing Law &amp; Jurisdiction</h1></div>
+      <p>These Terms and any dispute or claim arising out of or in connection with them, including any engagement between the parties, are governed by and construed in accordance with the laws of <strong>India</strong>.</p>
+      <p>Subject to the dispute-resolution provisions below, the courts at Chennai, Tamil Nadu shall have exclusive jurisdiction over any dispute arising under these Terms.</p>
+      <h3 class="sub">Dispute Resolution</h3>
+      <p>The parties will first attempt to resolve any dispute amicably through good-faith discussions. If the dispute is not resolved within <span class="fill">[30]</span> days, it may be referred to arbitration by a sole arbitrator in accordance with the Arbitration and Conciliation Act, 1996. The seat and venue of arbitration shall be Chennai, India, and the proceedings shall be conducted in English.</p>
+    </section>
+ 
+    <!-- 24. NON-SOLICITATION -->
+    <section id="s24">
+      <div class="sec-head"><span class="sec-num">24</span><h1 class="sec-title">Non-Solicitation</h1></div>
+      <p>During the term of any engagement and for a period of <span class="fill">[12]</span> months after its conclusion, the Client agrees not to, directly or indirectly, solicit, hire, or engage any employee, contractor, or team member of the Company who was involved in providing the Services, without the Company's prior written consent.</p>
+      <p>If the Client breaches this provision, the parties agree that a reasonable pre-estimate of the Company's loss shall be payable, as may be specified in the applicable SOW or as determined under applicable law.</p>
+    </section>
+ 
+    <!-- 25. PORTFOLIO RIGHTS -->
+    <section id="s25">
+      <div class="sec-head"><span class="sec-num">25</span><h1 class="sec-title">Portfolio Rights</h1></div>
+      <p>Unless the Client requests otherwise in writing, the Company reserves the right to:</p>
+      <ul class="clean">
+        <li>Display and describe the completed project in its portfolio, website, and marketing materials;</li>
+        <li>Reference the Client's name and logo as a client of the Company;</li>
+        <li>Include screenshots, case studies, or general descriptions of the work performed.</li>
+      </ul>
+      <p>The Company will not disclose any Confidential Information in doing so. If the Client wishes to keep an engagement confidential, it must notify the Company in writing before the project begins.</p>
+    </section>
+ 
+    <!-- 26. ASSIGNMENT -->
+    <section id="s26">
+      <div class="sec-head"><span class="sec-num">26</span><h1 class="sec-title">Assignment</h1></div>
+      <p>The Client may not assign, transfer, or subcontract any of its rights or obligations under these Terms without the Company's prior written consent.</p>
+      <p>The Company may assign or subcontract any part of the Services to qualified third parties or contractors, provided that the Company remains responsible for the performance of its obligations. The Company may also assign these Terms in connection with a transfer or restructuring of its business.</p>
+    </section>
+ 
+    <!-- 27. ENTIRE AGREEMENT -->
+    <section id="s27">
+      <div class="sec-head"><span class="sec-num">27</span><h1 class="sec-title">Entire Agreement</h1></div>
+      <p>These Terms, together with the applicable Quotation, Proposal, SOW, and any documents expressly referred to in them, constitute the entire agreement between the parties regarding the Services and supersede all prior discussions, representations, understandings, and agreements, whether oral or written.</p>
+      <p>No representation or statement not expressly set out in these Terms or the applicable engagement documents shall be binding on the Company, except in the case of fraud.</p>
+    </section>
+ 
+    <!-- 28. SEVERABILITY -->
+    <section id="s28">
+      <div class="sec-head"><span class="sec-num">28</span><h1 class="sec-title">Severability</h1></div>
+      <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court or competent authority, that provision shall be deemed modified to the minimum extent necessary to make it valid and enforceable, or, if it cannot be so modified, severed from these Terms.</p>
+      <p>The invalidity or unenforceability of any provision shall not affect the validity or enforceability of the remaining provisions, which shall continue in full force and effect.</p>
+    </section>
+ 
+    <!-- 29. WAIVER -->
+    <section id="s29">
+      <div class="sec-head"><span class="sec-num">29</span><h1 class="sec-title">Waiver</h1></div>
+      <p>No failure or delay by the Company in exercising any right or remedy under these Terms shall operate as a waiver of that right or remedy, nor shall any single or partial exercise prevent any further exercise of it.</p>
+      <p>A waiver of any provision or breach is effective only if made in writing and signed by the Company, and applies only to the specific instance for which it is given.</p>
+    </section>
+ 
+    <!-- 30. CONTACT -->
+    <section id="s30">
+      <div class="sec-head"><span class="sec-num">30</span><h1 class="sec-title">Contact Information</h1></div>
+      <p>For any questions, notices, or concerns regarding these Terms or the Services, please contact:</p>
+      <div class="tbl-wrap">
+        <table>
+          <tbody>
+            <tr><th style="width:34%">Company</th><td>Reinsteins Technologies &amp; Solutions</td></tr>
+            <tr><th>Attention</th><td>REBEKKAL V </td></tr>
+            <tr><th>Address</th><td>No. 6/24, Krishna Kutir, 4 Ramanathan Street, Mahalingapuram, Chennai 600034, Tamil Nadu, India</td></tr>
+            <tr><th>Email</th><td>contact@reinsteins.com</td></tr>
+            <tr><th>Phone</th><td>+91 99403 90309</td></tr>
+            <tr><th>Business Hours</th><td><span class="fill">[Mon–Fri, 10:00–18:00 IST]</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Written notices under these Terms should be sent to the email or postal address above and are deemed received on the next business day for email, or three business days after posting for physical mail.</p>
+    </section>
+ 
+  </main>
+</div>
+ 
+<footer class="doc-foot">
+  <div class="rule"></div>
+  <p class="mark">Reinsteins Technologies &amp; Solutions</p>
+  <p>Terms &amp; Conditions · Version 1.0 · Effective July 20, 2026</p>
+  <p>© 2026 Reinsteins Technologies &amp; Solutions. All rights reserved.</p>
+</footer>
+ 
+<script>
+  // Highlight the current section in the table of contents
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+    var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+    if(!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          var active = map[e.target.id];
+          if(active) active.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-10% 0px -80% 0px', threshold:0});
+    sections.forEach(function(s){ obs.observe(s); });
+  })();
+</script>
+ 
+</body>
+</html>

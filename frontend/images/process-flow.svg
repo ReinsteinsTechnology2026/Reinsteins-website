@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1200 190" xmlns="http://www.w3.org/2000/svg">
+  <!-- connecting line -->
+  <line x1="150" y1="95" x2="1050" y2="95" stroke="#B19463" stroke-width="2" stroke-opacity="0.35" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+  <!-- arrow chevrons between nodes -->
+  <g fill="none" stroke="#B19463" stroke-width="2.4" stroke-opacity="0.55" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M363,88 L375,95 L363,102"/>
+    <path d="M663,88 L675,95 L663,102"/>
+    <path d="M963,88 L975,95 L963,102"/>
+  </g>
+
+  <!-- Node 1: Discover (magnifier) -->
+  <g transform="translate(150,95)">
+    <circle r="46" fill="#171717" stroke="#B19463" stroke-width="2"/>
+    <circle r="34" fill="none" stroke="#B19463" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 5"/>
+    <g stroke="#EDE6D8" stroke-width="2.4" fill="none" stroke-linecap="round">
+      <circle cx="-4" cy="-4" r="12"/>
+      <line x1="5" y1="5" x2="15" y2="15"/>
+    </g>
+  </g>
+
+  <!-- Node 2: Design (pencil + ruler) -->
+  <g transform="translate(450,95)">
+    <circle r="46" fill="#171717" stroke="#B19463" stroke-width="2"/>
+    <circle r="34" fill="none" stroke="#B19463" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 5"/>
+    <g stroke="#EDE6D8" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-13,13 L9,-9 L14,-4 L-8,18 Z"/>
+      <path d="M9,-9 L14,-14 L19,-9 L14,-4 Z" fill="#EDE6D8"/>
+      <line x1="-13" y1="13" x2="-16" y2="16"/>
+    </g>
+  </g>
+
+  <!-- Node 3: Develop (code brackets) -->
+  <g transform="translate(750,95)">
+    <circle r="46" fill="#171717" stroke="#B19463" stroke-width="2"/>
+    <circle r="34" fill="none" stroke="#B19463" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 5"/>
+    <g stroke="#EDE6D8" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-8,-14 L-19,0 L-8,14"/>
+      <path d="M8,-14 L19,0 L8,14"/>
+    </g>
+  </g>
+
+  <!-- Node 4: Deploy (rocket) -->
+  <g transform="translate(1050,95)">
+    <circle r="46" fill="#171717" stroke="#B19463" stroke-width="2"/>
+    <circle r="34" fill="none" stroke="#B19463" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 5"/>
+    <g stroke="#EDE6D8" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0,-18 C8,-12 10,2 4,14 L-4,14 C-10,2 -8,-12 0,-18 Z"/>
+      <path d="M-4,14 L-9,20 M4,14 L9,20"/>
+      <circle cx="0" cy="-6" r="3" fill="#EDE6D8" stroke="none"/>
+    </g>
+  </g>
+</svg>
