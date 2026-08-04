@@ -2269,12 +2269,19 @@ display:none;
 
 }
 
-.menu-btn{
+.menu-toggle{
 
 display:flex;
+align-items:center;
+justify-content:center;
 
 }
 
+.nav-menu{
+
+display:none;
+
+}
 
 .nav-menu.mobile-menu{
 

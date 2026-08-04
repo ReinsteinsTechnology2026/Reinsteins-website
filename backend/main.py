@@ -7,17 +7,8 @@ from dotenv import load_dotenv
 from schemas.contact import ContactRequest
 from services.graph_mail import send_contact_email
 
-from database.database import engine, SessionLocal
-
-from models.user import User
-from models.enquiry import Enquiry
-
 from auth.auth import router as auth_router
 
-
-# Create Database Tables
-User.metadata.create_all(bind=engine)
-Enquiry.metadata.create_all(bind=engine)
 
 # Load environment variables
 load_dotenv()
@@ -64,47 +55,15 @@ def home():
 @app.post("/contact")
 def contact(request: ContactRequest):
 
-    db = SessionLocal()
+    send_contact_email(
+        request.full_name,
+        request.email,
+        request.phone,
+        request.company,
+        request.message
+    )
 
-    try:
-        enquiry = Enquiry(
-            full_name=request.full_name,
-            email=request.email,
-            phone=request.phone,
-            company=request.company,
-            message=request.message,
-            status="New"
-        )
-
-        db.add(enquiry)
-        db.commit()
-        db.refresh(enquiry)
-
-        send_contact_email(
-            request.full_name,
-            request.email,
-            request.phone,
-            request.company,
-            request.message
-        )
-
-        return {
-            "success": True,
-            "message": "Thank you for contacting Reinsteins Technologies & Solutions. Our team will contact you shortly."
-        }
-
-    finally:
-        db.close()
-
-
-@app.get("/enquiries")
-def get_enquiries():
-
-    db = SessionLocal()
-
-    try:
-        enquiries = db.query(Enquiry).all()
-        return enquiries
-
-    finally:
-        db.close()
+    return {
+        "success": True,
+        "message": "Thank you for contacting Reinsteins Technologies & Solutions. Our team will contact you shortly."
+    }

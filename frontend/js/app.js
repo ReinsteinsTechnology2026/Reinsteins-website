@@ -52,7 +52,7 @@ window.addEventListener("scroll", () => {
 
 /* Mobile Menu */
 
-const menuBtn = document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
 if(menuBtn){
