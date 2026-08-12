@@ -18,13 +18,13 @@ jobs:
 
       - name: Restart FastAPI
         run: |
-          sudo systemctl restart reinsteins-backend
-          sudo systemctl is-active reinsteins-backend
+          sudo -n /usr/bin/systemctl restart reinsteins-backend
+          sudo -n /usr/bin/systemctl is-active reinsteins-backend
 
       - name: Reload Nginx
         run: |
-          sudo nginx -t
-          sudo systemctl reload nginx
+          sudo -n /usr/sbin/nginx -t
+          sudo -n /usr/bin/systemctl reload nginx
 
       - name: Deployment complete
         run: |
