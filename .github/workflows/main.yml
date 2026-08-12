@@ -1,0 +1,31 @@
+name: Deploy Reinsteins Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Update repository
+        run: |
+          cd /home/reinsteins/Reinsteins-website
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Restart FastAPI
+        run: |
+          sudo systemctl restart reinsteins-backend
+          sudo systemctl is-active reinsteins-backend
+
+      - name: Reload Nginx
+        run: |
+          sudo nginx -t
+          sudo systemctl reload nginx
+
+      - name: Deployment complete
+        run: |
+          echo "Reinsteins website deployed successfully."
