@@ -395,3 +395,167 @@ if (contactForm) {
     });
 
 }
+
+/* ==========================================================
+RESUME SUBMISSION MODAL
+========================================================== */
+
+const resumeModal = document.getElementById("resumeModal");
+const openResumeModalBtn = document.getElementById("openResumeModalBtn");
+const closeResumeModal = document.getElementById("closeResumeModal");
+const resumeForm = document.getElementById("resumeForm");
+const resumeFormView = document.getElementById("resumeFormView");
+const resumeSuccessView = document.getElementById("resumeSuccessView");
+const resumeFileInput = document.getElementById("resumeFile");
+const resumeUploadLabel = document.getElementById("resumeUploadLabel");
+const resumeFileNameText = document.getElementById("resumeFileName");
+const resumeError = document.getElementById("resumeError");
+
+const MAX_RESUME_SIZE = 2 * 1024 * 1024; // 2MB
+const DEFAULT_RESUME_LABEL = "Upload Your Resume (PDF or Word, max 2MB)";
+
+function resetResumeModal() {
+
+    if (resumeForm) resumeForm.reset();
+
+    if (resumeError) resumeError.textContent = "";
+
+    if (resumeUploadLabel) resumeUploadLabel.classList.remove("has-file");
+
+    if (resumeFileNameText) resumeFileNameText.textContent = DEFAULT_RESUME_LABEL;
+
+    if (resumeFormView) resumeFormView.style.display = "";
+
+    if (resumeSuccessView) resumeSuccessView.classList.remove("show");
+
+}
+
+if (openResumeModalBtn && resumeModal) {
+
+    openResumeModalBtn.addEventListener("click", () => {
+        resumeModal.classList.add("show");
+    });
+
+}
+
+if (closeResumeModal && resumeModal) {
+
+    closeResumeModal.addEventListener("click", () => {
+        resumeModal.classList.remove("show");
+        resetResumeModal();
+    });
+
+    resumeModal.addEventListener("click", (e) => {
+
+        if (e.target === resumeModal) {
+            resumeModal.classList.remove("show");
+            resetResumeModal();
+        }
+
+    });
+
+    document.addEventListener("keydown", (e) => {
+
+        if (e.key === "Escape" && resumeModal.classList.contains("show")) {
+            resumeModal.classList.remove("show");
+            resetResumeModal();
+        }
+
+    });
+
+}
+
+if (resumeFileInput) {
+
+    resumeFileInput.addEventListener("change", () => {
+
+        const file = resumeFileInput.files[0];
+
+        resumeError.textContent = "";
+
+        if (file) {
+
+            if (file.size > MAX_RESUME_SIZE) {
+
+                resumeError.textContent = "File size must not exceed 2MB. Please choose a smaller file.";
+                resumeFileInput.value = "";
+                resumeUploadLabel.classList.remove("has-file");
+                resumeFileNameText.textContent = DEFAULT_RESUME_LABEL;
+                return;
+
+            }
+
+            resumeUploadLabel.classList.add("has-file");
+            resumeFileNameText.textContent = file.name;
+
+        }
+
+    });
+
+}
+
+if (resumeForm) {
+
+    resumeForm.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+
+        const file = resumeFileInput.files[0];
+
+        if (!file) {
+            resumeError.textContent = "Please attach your resume.";
+            return;
+        }
+
+        if (file.size > MAX_RESUME_SIZE) {
+            resumeError.textContent = "File size must not exceed 2MB.";
+            return;
+        }
+
+        resumeError.textContent = "";
+
+        const submitButton = document.getElementById("resumeSubmitBtn");
+        submitButton.disabled = true;
+        submitButton.innerText = "Submitting...";
+
+        const formData = new FormData();
+        formData.append("subject", document.getElementById("resumeSubject").value.trim());
+        formData.append("name", document.getElementById("resumeName").value.trim());
+        formData.append("description", document.getElementById("resumeDescription").value.trim());
+        formData.append("resume", file);
+
+        try {
+
+            const response = await fetch("https://reinsteins-website.vercel.app/careers/apply", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+
+                resumeFormView.style.display = "none";
+                resumeSuccessView.classList.add("show");
+
+            } else {
+
+                resumeError.textContent = result.detail || "Something went wrong. Please try again.";
+
+            }
+
+        } catch (error) {
+
+            console.error("Resume Submission Error:", error);
+            resumeError.textContent = "Unable to connect to the server. Please try again later.";
+
+        } finally {
+
+            submitButton.disabled = false;
+            submitButton.innerText = "Submit Application";
+
+        }
+
+    });
+
+}

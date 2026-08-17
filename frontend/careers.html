@@ -185,17 +185,11 @@ CALL TO ACTION
 
             <div class="cta-buttons">
 
-                <a href="mailto:careers@reinsteins.com" class="primary-btn">
+                <button type="button" id="openResumeModalBtn" class="primary-btn">
 
                     Send Your Resume
 
-                </a>
-
-                <a href="index.html#contact" class="secondary-btn">
-
-                    Contact Us
-
-                </a>
+                </button>
 
             </div>
 
@@ -264,6 +258,7 @@ CALL TO ACTION
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="index.html#case-studies">Case Studies</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="careers.html">Careers</a></li>
                 </ul>
@@ -371,11 +366,100 @@ CALL TO ACTION
     </div>
 
 </footer>
-<button id="topBtn">
+<button id="scrollTopBtn" aria-label="Scroll to top">
 
 <i class="fa-solid fa-arrow-up"></i>
 
 </button>
+
+<!-- ==========================================================
+RESUME SUBMISSION MODAL
+========================================================== -->
+
+<div id="resumeModal" class="resume-modal">
+
+    <div class="resume-modal-box">
+
+        <button type="button" id="closeResumeModal" class="resume-modal-close" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="resumeFormView">
+
+            <h2>Send Your Resume</h2>
+
+            <p class="resume-modal-subtext">
+                Tell us a little about yourself and attach your resume. We'll keep it on
+                file and reach out when a suitable opportunity opens up.
+            </p>
+
+            <form id="resumeForm" novalidate>
+
+                <input
+                    type="text"
+                    id="resumeSubject"
+                    name="subject"
+                    placeholder="Subject"
+                    required>
+
+                <input
+                    type="text"
+                    id="resumeName"
+                    name="name"
+                    placeholder="Full Name"
+                    required>
+
+                <textarea
+                    id="resumeDescription"
+                    name="description"
+                    rows="4"
+                    placeholder="Describe yourself..."
+                    required></textarea>
+
+                <label class="resume-upload-label" for="resumeFile" id="resumeUploadLabel">
+
+                    <i class="fa-solid fa-paperclip"></i>
+
+                    <span id="resumeFileName">Upload Your Resume (PDF or Word, max 2MB)</span>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="resumeFile"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required
+                    hidden>
+
+                <p id="resumeError" class="resume-error"></p>
+
+                <button type="submit" id="resumeSubmitBtn">
+                    Submit Application
+                </button>
+
+            </form>
+
+        </div>
+
+        <div id="resumeSuccessView" class="resume-success">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h3>Thank You!</h3>
+
+            <p>
+                Your resume has been submitted successfully. Our team will reach out if a
+                suitable opportunity comes up.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script src="js/app.js"></script>
 

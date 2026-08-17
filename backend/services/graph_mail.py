@@ -1,4 +1,5 @@
 import os
+import base64
 import requests
 import msal
 from dotenv import load_dotenv
@@ -87,6 +88,81 @@ def send_contact_email(full_name, email, phone, company, message):
                     "emailAddress": {
                         "address": TO_EMAIL
                     }
+                }
+            ]
+        },
+        "saveToSentItems": True
+    }
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    response = requests.post(endpoint, headers=headers, json=payload)
+
+    if response.status_code != 202:
+        raise Exception(response.text)
+
+    return True
+
+
+def send_resume_email(name, subject, description, filename, file_bytes, content_type, to_email):
+
+    token = get_access_token()
+
+    endpoint = f"https://graph.microsoft.com/v1.0/users/{FROM_EMAIL}/sendMail"
+
+    html_body = f"""
+    <html>
+    <body style="font-family:Arial,sans-serif">
+        <h2>New Career Application</h2>
+
+        <table cellpadding="8">
+
+            <tr>
+                <td><b>Name</b></td>
+                <td>{name}</td>
+            </tr>
+
+            <tr>
+                <td><b>Subject</b></td>
+                <td>{subject}</td>
+            </tr>
+
+            <tr>
+                <td><b>About</b></td>
+                <td>{description}</td>
+            </tr>
+
+        </table>
+
+    </body>
+    </html>
+    """
+
+    encoded_content = base64.b64encode(file_bytes).decode("utf-8")
+
+    payload = {
+        "message": {
+            "subject": f"Career Application - {subject} - {name}",
+            "body": {
+                "contentType": "HTML",
+                "content": html_body
+            },
+            "toRecipients": [
+                {
+                    "emailAddress": {
+                        "address": to_email
+                    }
+                }
+            ],
+            "attachments": [
+                {
+                    "@odata.type": "#microsoft.graph.fileAttachment",
+                    "name": filename,
+                    "contentType": content_type or "application/octet-stream",
+                    "contentBytes": encoded_content
                 }
             ]
         },
