@@ -3987,6 +3987,49 @@ transform:translateY(0);
 
 }
 
+.ai-suggestions{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:18px;
+max-width:360px;
+opacity:0;
+transform:translateY(8px);
+transition:opacity .4s ease, transform .4s ease;
+
+}
+
+.ai-suggestions.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+.ai-suggestion-chip{
+
+padding:10px 18px;
+border-radius:40px;
+background:rgba(177,148,99,.1);
+border:1px solid rgba(177,148,99,.35);
+color:#EDE6D8;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+font-family:'Manrope',sans-serif;
+
+}
+
+.ai-suggestion-chip:hover{
+
+background:#B19463;
+color:#171717;
+border-color:#B19463;
+
+}
+
 .ai-waveform.active span{
 
 animation-duration:.5s;
